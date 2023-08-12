@@ -44,7 +44,7 @@ const Loginpage = () => {
                 <div className="flex flex-col">
                   <label htmlFor="email" className="text-white pt-9">Email:</label>
                   <Field type="email" name="email" className="form-control mt-2  w-[500px]" />
-                  <ErrorMessage name="email" className="text-red-600"/>
+                  <span className="text-red-600"> <ErrorMessage name="email"/></span>
                 </div>
                 <div >
                   <label htmlFor="password" className="text-white pt-9">Password:</label>
@@ -53,7 +53,7 @@ const Loginpage = () => {
                     name="password"
                     className="form-control w-[500px]"
                   />
-                  <span className="bg-white"> <ErrorMessage name="password"/></span>
+                  <span className="text-red-600"> <ErrorMessage name="password"/></span>
                  
                 </div>
                 <button type="submit" className="btn btn-primary btn mt-9 ml-[200px]">

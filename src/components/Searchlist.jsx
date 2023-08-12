@@ -1,4 +1,3 @@
-import { Hidden } from '@mui/material'
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
@@ -7,11 +6,12 @@ function Searchlist({input}) {
   const [isclosed , setclosed] = useState(true)
 
   const closed = (()=>{
-    setclosed(false)
+    setclosed(false) //Toggle the isclosed state
+    input = null
   })
   return (
     
-      <div class={isclosed? "bg-black  text-white text-center ml-[20%] list-none z-10 absolute mt-3 overflow-y-auto h-52" : "hidden"}>
+      <div class={input.length>0 &&isclosed? "bg-black  text-white text-center ml-[30%] list-none z-10 absolute mt-1 overflow-y-auto h-52 w-[40%]" : "hidden"}>
        {
         input.map((movie)=>(
           <li key={movie.id}>

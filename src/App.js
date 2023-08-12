@@ -11,13 +11,13 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/Homepage" element={<Homepage/>} />
+        <Route path="/" element={<Homepage/>} />
         <Route path="/popular" element={<Popular/>} />
         <Route path="/movie/:id" element={<Moviedetailpage/>} />
         <Route path="/movie" element={<Moviedetailpage/>} />
         <Route path="/toprated" element={<Topratedpage/>} />
         <Route path="/upcoming" element={<Upcoming/>}/>
-        <Route path="/" element={<Loginpage/>}/>
+        <Route path="/login" element={<Loginpage/>}/>
       </Routes>
     </BrowserRouter>
   );
